@@ -4,10 +4,10 @@ import (
 	"context"
 	"log"
 
-	"github.com/go-ble/ble"
-	"github.com/go-ble/ble/linux/att"
-	"github.com/go-ble/ble/linux/gatt"
-	"github.com/go-ble/ble/linux/hci"
+	"github.com/gumpyoung/ble"
+	"github.com/gumpyoung/ble/linux/att"
+	"github.com/gumpyoung/ble/linux/gatt"
+	"github.com/gumpyoung/ble/linux/hci"
 	"github.com/pkg/errors"
 )
 

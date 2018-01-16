@@ -4,8 +4,8 @@ import (
 	"log"
 	"sync"
 
-	"github.com/go-ble/ble"
-	"github.com/go-ble/ble/linux/att"
+	"github.com/gumpyoung/ble"
+	"github.com/gumpyoung/ble/linux/att"
 )
 
 // NewServerWithName creates a new Server with the specified name

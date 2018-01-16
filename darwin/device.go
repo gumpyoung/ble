@@ -259,6 +259,7 @@ func (d *Device) RemoveAllServices() error {
 // 0x180F (Battery Service)
 // 0x1812 (Human Interface Device)
 func (d *Device) AddService(s *ble.Service) error {
+	log.Println("AddService:", s)
 	if s.UUID.Equal(ble.GAPUUID) ||
 		s.UUID.Equal(ble.GATTUUID) ||
 		s.UUID.Equal(ble.CurrentTimeUUID) ||

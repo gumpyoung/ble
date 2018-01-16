@@ -2,6 +2,7 @@ package darwin
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/gumpyoung/ble"
 	"github.com/raff/goble/xpc"
@@ -68,6 +69,7 @@ func (cln *Client) DiscoverProfile(force bool) (*ble.Profile, error) {
 // DiscoverServices finds all the primary services on a server. [Vol 3, Part G, 4.4.1]
 // If filter is specified, only filtered services are returned.
 func (cln *Client) DiscoverServices(ss []ble.UUID) ([]*ble.Service, error) {
+	log.Println("-> DiscoverServices")
 	rsp, err := cln.conn.sendReq(cmdDiscoverServices, xpc.Dict{
 		"kCBMsgArgDeviceUUID": cln.id,
 		"kCBMsgArgUUIDs":      uuidSlice(ss),
